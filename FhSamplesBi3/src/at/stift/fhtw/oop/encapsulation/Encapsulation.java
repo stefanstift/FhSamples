@@ -1,24 +1,26 @@
 package at.stift.fhtw.oop.encapsulation;
 
-import at.stift.fhtw.oop.encapsulation.model.SecuredTruck;
-import at.stift.fhtw.oop.encapsulation.model.UnsecuredTruck;
+import at.stift.fhtw.oop.encapsulation.model.SecuredVehicle;
+import at.stift.fhtw.oop.encapsulation.model.UnsecuredVehicle;
 
 public class Encapsulation {
 
     public static void main(String ... strings) {
 
-        UnsecuredTruck unsecuredTruck  = new UnsecuredTruck();
+        UnsecuredVehicle unsecuredVehicle  = new UnsecuredVehicle();
 
-        unsecuredTruck.speed = 50;
-        unsecuredTruck.drive();
+        unsecuredVehicle.speed = 50;
+        unsecuredVehicle.drive();
 
-        unsecuredTruck.speed = 500;
-        unsecuredTruck.drive();
+        unsecuredVehicle.speed = 500;
+        unsecuredVehicle.drive();
 
-        SecuredTruck securedTruck = new SecuredTruck();
-        securedTruck.drive(60);
+        SecuredVehicle securedTruck = new SecuredVehicle();
+        securedTruck.setSpeed(60);
+        securedTruck.drive();
         // throws Exception
-        securedTruck.drive(160);
+        securedTruck.setSpeed(160);
+        securedTruck.drive();
     }
 
 }

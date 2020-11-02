@@ -1,6 +1,6 @@
 package at.stift.fhtw.oop.encapsulation.model;
 
-public class UnsecuredTruck {
+public class UnsecuredVehicle implements Vehicle {
 
     // valid speed range 0 - 100 kmh
     public int speed;
